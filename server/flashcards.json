@@ -1,0 +1,125 @@
+{
+  "flashcards": [
+    {
+      "id": 1,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS"
+      ],
+      "front": "O que é Box Model?",
+      "back": "Modelo de design dos elementos em CSS, define que um elemento em CSS contém Margin, Padding, Border e Content"
+    },
+    {
+      "id": 2,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS"
+      ],
+      "front": "O que são Content, Padding, Border e Margin no Box Model?",
+      "back": "Content é o conteúdo em si do elemento. \nPadding é a área entre o conteúdo do elemento e a borda (É TRANSPARENTE). \nBorder é a borda do elemento. \nMargin é a área entre a borda do elemento e outros elementos (É TRANSPARENTE)."
+    },
+    {
+      "id": 3,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS",
+        "PROPRIEDADE CSS"
+      ],
+      "front": "O que são as propriedades width e height de um elemento?",
+      "back": "width é a propriedade que define a largura do elemento. \nheight é a propriedade que define a altura do elemento. \nTanto width quanto height definem as dimensões APENAS DO CONTENT do elemento."
+    },
+    {
+      "id": 4,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS"
+      ],
+      "front": "Quais são os valores default do padding, border e margin?",
+      "back": "padding - 0\nmargin - 0\nborder - none"
+    },
+    {
+      "id": 5,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS",
+        "PROPRIEDADE CSS"
+      ],
+      "front": "O que é a propriedade DISPLAY em css e qual seu valor default?",
+      "back": "A propriedade display define como o elemento vai ser mostrado na página, se vai ser um block, um elemento inline ou um elemento inline-block.\nTambém define como os elementos filhos serão dispostos dentro do elemento, podendo ser flexíveis (flex) ou em formato de grade (grid) por exemplo.\nSeu valor default é inline."
+    },
+    {
+      "id": 6,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS"
+      ],
+      "front": "O que é um elemento do tipo block, inline e inline-block.",
+      "back": "BLOCK: Se comporta como um bloco na página, geralmente ocupando toda a largura, e tem quebra de linha.\nINLINE: Se comporta como um elemento dentro de uma linha na página, não tendo quebra de linha.\nINLINE-BLOCK: Se comporta como um bloco dentro de uma linha na página.\nOBS: Geralmente não se aplica as propriedades do box model nos elementos inline."
+    },
+    {
+      "id": 7,
+      "create_date": "24/08/2024",
+      "tags": [
+        "CSS"
+      ],
+      "front": "O que é a propriedade VISIBILITY em css e qual seu valor default?",
+      "back": "A propriedade visibility controla se um elemento aparece ou não no documento sem alterar o layout.\nSeu valor default é visible."
+    },
+    {
+      "id": 8,
+      "create_date": "2/9/2024",
+      "tags": [
+        "DADOS",
+        "BI"
+      ],
+      "front": "Quais são os conceitos principais de BI",
+      "back": "Extração, Transformação e Carga de dados (ETL) | DataWarehouse (DW) | Processamento Analítico de Dados (OLAP) | Painés de Indicadores | Big Data"
+    },
+    {
+      "id": 9,
+      "create_date": "2/9/2024",
+      "tags": [
+        "DADOS",
+        "BI"
+      ],
+      "front": "Qual a diferença entre DADO, METADADO e INFORMAÇÃO?",
+      "back": "Dados é o registro das coisas, enquanto metadado é o que descreve o dado e a informação é a junção do dado e do metadado que o descreve."
+    },
+    {
+      "id": 10,
+      "create_date": "2/9/2024",
+      "tags": [
+        "DADOS",
+        "BI"
+      ],
+      "front": "O que é Business Intelligence (BI)?",
+      "back": "São sistemas e processos que fornecem uma toda uma infraestrutura para tomar decisões de negócio com base em dados que podem vir de diversas fontes."
+    },
+    {
+      "id": 11,
+      "create_date": "2/9/2024",
+      "tags": [
+        "DADOS",
+        "BI"
+      ],
+      "front": "Quais as características de BI?",
+      "back": "Foca na visão da corporação, tem o tipo de processamento analítico, visa agilizar e facilitar análises para tomadas de decisão, deve ser histórico, tem suporte a consultas ad-hoc e longas, BD basicamente desnormalizado."
+    },
+    {
+      "id": 12,
+      "create_date": "2/9/2024",
+      "tags": [
+        "DADOS",
+        "BI"
+      ],
+      "front": "Como são armazenados os dados utilizados nos sistemas de BI?",
+      "back": "Em Data Warehouses, devido a heterogeneidade das fontes e as diferentes características do sistema é necessario a adoção de um tipo de banco específico chamados de DataWarehouse (DW)."
+    }
+  ],
+  "tags": [
+    "DADOS",
+    "BI",
+    "CSS",
+    "PROPRIEDADE CSS"
+  ]
+}
