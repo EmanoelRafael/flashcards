@@ -21,6 +21,12 @@ function FlashcardItem({ flashcard }: { flashcard: any }) {
 
       {isFront ? <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{flashcard['front']}</h5>
       : <p className="font-normal text-gray-700 dark:text-gray-400">{flashcard['back']}</p>}
+      <div className="flex flex-wrap space-x-2">
+        {flashcard['tags'].map((tag:any)=>(
+          <p className="mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white" >#{tag}</p>
+        ))}
+      </div>
+      
     </div>
   );
 }
