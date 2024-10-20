@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FlashcardItem from './FlashcardItem';
 
 export default function FlashcardList(props: any) {
@@ -10,8 +10,22 @@ export default function FlashcardList(props: any) {
     console.log("flashcsdfgsdfgdssdfgsdfgsf")
     console.log(flashcards)
     console.log(tags_list)
+    var flashcardsList = flashcards;
     const [tags, setTags] = useState<string[]>([]);
     const [tagInput, setTagInput] = useState('');
+    const [filteredFlashcards, setFilteredFlashcards] = useState([]);
+
+    function verifyTags(flashcard: any) {
+        
+        const isValid = tags.every(tag => {
+          if (!flashcard['tags'].includes(tag)) {
+            return false; 
+          }
+          return true; 
+        });
+      
+        return isValid; 
+      }
 
     const handleTagInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTagInput(e.target.value);
@@ -23,10 +37,16 @@ export default function FlashcardList(props: any) {
             setTags([...tags, tagInput.trim().toUpperCase()]);
             setTagInput('');
         }
+        
     };
 
+    useEffect(() => {
+        const filteredList:any = flashcards.filter(verifyTags);
+        setFilteredFlashcards(filteredList);
+      }, [tags]);
+
     const removeTag = (indexToRemove: number) => {
-    setTags(tags.filter((_, index) => index !== indexToRemove));
+        setTags(tags.filter((_, index) => index !== indexToRemove));
     };
 
     return (
@@ -56,7 +76,9 @@ export default function FlashcardList(props: any) {
                 </div>
             </div>
             <div>
-                {flashcards.map((flashcard: any) => (
+                {
+                
+                filteredFlashcards.map((flashcard: any) => (
                     <FlashcardItem key={flashcard['id']} flashcard={flashcard} />
                 ))}
             </div>
