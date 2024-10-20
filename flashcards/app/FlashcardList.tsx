@@ -51,7 +51,7 @@ export default function FlashcardList(props: any) {
 
     return (
         <div>
-            <div className="flashcard_filter">
+            <div className="flashcard_filter mb-5">
                 <input
                 type="text"
                 value={tagInput}
