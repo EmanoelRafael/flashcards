@@ -22,16 +22,16 @@ function readJSONFile(filePath) {
         fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
                 console.error('Erro ao ler o arquivo:', err);
-                reject(err); // Rejeita a promessa em caso de erro
+                reject(err);
                 return;
             }
 
             try {
                 const jsonData = JSON.parse(data);
-                resolve(jsonData); // Resolve a promessa com os dados JSON
+                resolve(jsonData);
             } catch (err) {
                 console.error('Erro ao analisar o JSON:', err);
-                reject(err); // Rejeita a promessa em caso de erro de parsing
+                reject(err);
             }
         });
     });
@@ -41,7 +41,7 @@ function getDate() {
     const today = new Date();
 
     const day = today.getDate();
-    const month = today.getMonth() + 1; // Os meses são baseados em zero, então somamos 1
+    const month = today.getMonth() + 1;
     const year = today.getFullYear();
 
     const formattedDate = `${day}/${month}/${year}`;
@@ -50,11 +50,6 @@ function getDate() {
 }
 
 function orderedFlashcard(flashcard) {
-    const flashcard_id = flashcard['id']
-    const flashcard_create_date = flashcard['create_date']
-    const flashcard_tags = flashcard['tags']
-    const flashcard_front = flashcard['front']
-    const flashcard_back = flashcard['back']
 
     const newFlashcard = {
         id: flashcard['id'],
@@ -84,24 +79,16 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/*function validateFile(flashcardFile) {
-    console.log('textsss')
-    return true
-}*/
-
-// Função para validar o arquivo CSV
 const validateFile = (req, res, next) => {
     const flashcardsFile = req.file;
   
     if (!flashcardsFile) {
       return res.status(400).send('Nenhum arquivo foi enviado.');
     }
-  
-    // Use um buffer do arquivo em memória para leitura
+
     const results = [];
-    const expectedHeaders = ['frontCard', 'backCard']; // As colunas que queremos validar
+    const expectedHeaders = ['frontCard', 'backCard'];
   
-    // Converte o buffer em um stream legível
     const fileStream = require('streamifier').createReadStream(flashcardsFile.buffer);
   
     fileStream
@@ -114,13 +101,11 @@ const validateFile = (req, res, next) => {
         }
       })
       .on('data', (row) => {
-        // Valida cada linha, se necessário
         results.push(row);
       })
       .on('end', () => {
-        // O arquivo CSV está no formato correto, prossiga para a próxima função
-        req.flashcardsData = results; // Armazena os dados processados para uso posterior
-        next(); // Prossegue com a requisição
+        req.flashcardsData = results;
+        next();
       })
       .on('error', (error) => {
         return res.status(500).send('Erro ao processar o arquivo CSV.');
@@ -137,7 +122,6 @@ app.get('/flashcards_list', async (req, res) => {
     res.send(json_content);
 });
 
-// Nova rota POST para adicionar flashcard ao JSON
 app.post('/add_flashcard', async (req, res) => {
     const newFlashcard = req.body;
     
@@ -147,18 +131,10 @@ app.post('/add_flashcard', async (req, res) => {
     }
 
     try {
-        // Lê o JSON existente
         const data = await readJSONFile(jsonFilePath);
-        /*const dataa = Array.from(data);
-        console.log('id do ultimo: ', dataa[-1]['id']);*/
-        console.log("yeah gugudada")
-        console.log(data.flashcards.slice(-1)[0]['id'])
         newFlashcard['id'] = data.flashcards.slice(-1)[0]['id'] + 1;
         newFlashcard['create_date'] = getDate();
-        //newFlashcard = orderedFlashcard(newFlashcard)
-        // Adiciona o novo flashcard
         data.flashcards.push(orderedFlashcard(newFlashcard));
-        // Salva o JSON atualizado
         await writeJSONFile(jsonFilePath, data);
 
         res.status(200).send('Flashcard adicionado com sucesso!');
@@ -168,32 +144,23 @@ app.post('/add_flashcard', async (req, res) => {
 });
 
 app.post('/upload_flashcards_file', upload.single('file'), validateFile, async (req, res) => {
-    /*const flashcardsFile = req.file;
-    
-    console.log(flashcardsFile)
-    if (!validateFile(flashcardsFile)) {
-        return res.status(400).send('O arquivo não está no formato correto.');
-    }
-    */
     try {
-        // Lê o JSON existente
-        /*const data = await readJSONFile(jsonFilePath);
-        const dataa = Array.from(data);
-        console.log('id do ultimo: ', dataa[-1]['id']);
-        console.log("yeah gugudada")
-        console.log(data.flashcards.slice(-1)[0]['id'])
-        newFlashcard['id'] = data.flashcards.slice(-1)[0]['id'] + 1;
-        newFlashcard['create_date'] = getDate();
-        //newFlashcard = orderedFlashcard(newFlashcard)
-        // Adiciona o novo flashcard
-        data.flashcards.push(orderedFlashcard(newFlashcard));
-        // Salva o JSON atualizado
-        await writeJSONFile(jsonFilePath, data); */
         const flashcards = req.flashcardsData;
-
-        // Exemplo de processamento dos flashcards
-        console.log(flashcards);
-    
+        const data = await readJSONFile(jsonFilePath);
+        const dataa = Array.from(data);
+        const id_aux = data.flashcards.slice(-1)[0]['id'] + 1;
+        const date = getDate()
+        for (let index = 0; index < flashcards.length-1; index++) {
+            const newFlashcard = {}
+            newFlashcard['id'] = id_aux+index;
+            newFlashcard['create_date'] = date;
+            newFlashcard['tags'] = flashcards[flashcards.length-1]['backCard'].trim().toUpperCase().split('-');
+            console.log(newFlashcard['tags'])
+            newFlashcard['front'] = flashcards[index]['frontCard']
+            newFlashcard['back'] = flashcards[index]['backCard']
+            data.flashcards.push(newFlashcard)
+        }
+        await writeJSONFile(jsonFilePath, data);
         res.status(200).send('Flashcards CSV validado e processado com sucesso.');
     } catch (error) {
         res.status(500).send('Erro ao adicionar o flashcard.');
