@@ -134,6 +134,11 @@ app.post('/add_flashcard', async (req, res) => {
         const data = await readJSONFile(jsonFilePath);
         newFlashcard['id'] = data.flashcards.slice(-1)[0]['id'] + 1;
         newFlashcard['create_date'] = getDate();
+        for (let index = 0; index < newFlashcard['tags'].length; index++) {
+            if (!data.tags.includes(newFlashcard['tags'][index])) {
+                data.tags.push(newFlashcard['tags'][index]);
+            };
+        }
         data.flashcards.push(orderedFlashcard(newFlashcard));
         await writeJSONFile(jsonFilePath, data);
 
@@ -147,23 +152,28 @@ app.post('/upload_flashcards_file', upload.single('file'), validateFile, async (
     try {
         const flashcards = req.flashcardsData;
         const data = await readJSONFile(jsonFilePath);
-        const dataa = Array.from(data);
         const id_aux = data.flashcards.slice(-1)[0]['id'] + 1;
         const date = getDate()
+        const tags = flashcards[flashcards.length-1]['backCard'].trim().toUpperCase().split('-')
         for (let index = 0; index < flashcards.length-1; index++) {
             const newFlashcard = {}
             newFlashcard['id'] = id_aux+index;
             newFlashcard['create_date'] = date;
-            newFlashcard['tags'] = flashcards[flashcards.length-1]['backCard'].trim().toUpperCase().split('-');
-            console.log(newFlashcard['tags'])
+            newFlashcard['tags'] = tags;
             newFlashcard['front'] = flashcards[index]['frontCard']
             newFlashcard['back'] = flashcards[index]['backCard']
             data.flashcards.push(newFlashcard)
+        }
+        for (let index = 0; index < tags.length; index++) {
+            if (!data.tags.includes(tags[index])) {
+                data.tags.push(tags[index]);
+            };
         }
         await writeJSONFile(jsonFilePath, data);
         res.status(200).send('Flashcards CSV validado e processado com sucesso.');
     } catch (error) {
         res.status(500).send('Erro ao adicionar o flashcard.');
+        console.log(error)
     }
 });
 
