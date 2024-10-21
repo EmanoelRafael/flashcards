@@ -7,6 +7,9 @@ export default function AddFlashcardForm() {
   const [back, setBack] = useState('');
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState('');
+  const [file, setFile] = useState<File | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleTagInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTagInput(e.target.value);
@@ -22,6 +25,53 @@ export default function AddFlashcardForm() {
 
   const removeTag = (indexToRemove: number) => {
     setTags(tags.filter((_, index) => index !== indexToRemove));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+      setErrorMessage(null);
+    }
+  };
+
+  const handleFileUpload = async () => {
+    // Valida o formato do arquivo (deve ser .csv)
+    if (!file) {
+      console.log("nenhum arquivo selecionado");
+      setErrorMessage("Nenhum arquivo selecionado");
+      return;
+    }
+
+    if (file.type !== "text/csv") {
+      setErrorMessage("O arquivo deve estar no formato CSV");
+      console.log("O arquivo deve estar no formato CSV");
+      return;
+    }
+    
+    const formData = new FormData();
+    const text = await file.text()
+    console.log(text)
+    formData.append("file", file); // Adiciona o arquivo ao FormData
+    const formDataArray = Array.from(formData.entries());
+    console.log(formDataArray);
+    try {
+      console.log("Vou enviar")
+      const res = await fetch('http://localhost:3002/upload_flashcards_file', {
+        method: 'POST',
+        body: formData, // Envia o FormData com o arquivo
+      });
+
+      if (res.ok) {
+        setSuccessMessage("Arquivo enviado com sucesso");
+        console.log("enviei")
+        setFile(null); // Limpa o arquivo após o envio
+      } else {
+        setErrorMessage("Erro ao enviar o arquivo");
+      }
+    } catch (error) {
+      console.error("Erro:", error);
+      setErrorMessage("Erro ao enviar o arquivo");
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -106,15 +156,25 @@ export default function AddFlashcardForm() {
       </button>
       
       <label className="block mb-2 text-sm font-bold tracking-tight text-gray-900 dark:text-white" htmlFor="file_input">Upload Arquivo de Flashcards</label>
-      <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 mb-4" id="file_input" type="file">
+      <input 
+        className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 mb-4" 
+        id="file_input" 
+        type="file"
+        onChange={handleFileChange}
+        >
       </input>
+      {errorMessage && <p className="text-red-600">{errorMessage}</p>}
+      {successMessage && <p className="text-green-600">{successMessage}</p>}
+      {file && <p>Arquivo selecionado: {file.name}</p>}
       <button 
+        type='button'
+        onClick={handleFileUpload}
         className="m-2 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
          Add Flashcards File
         </span>
       </button>
-
+      
     </form>
   );
 }
