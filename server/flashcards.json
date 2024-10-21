@@ -114,12 +114,933 @@
       ],
       "front": "Como são armazenados os dados utilizados nos sistemas de BI?",
       "back": "Em Data Warehouses, devido a heterogeneidade das fontes e as diferentes características do sistema é necessario a adoção de um tipo de banco específico chamados de DataWarehouse (DW)."
+    },
+    {
+      "id": 13,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são Data Warehouses?",
+      "back": "Repositório central de informações que podem ser analisadas para tomar decisões mais adequadas. Basicamente é o local onde os dados são armazenados com o objetivo de servir para tomadas de decisões."
+    },
+    {
+      "id": 14,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como Funcionam os Data Warehouses?",
+      "back": "O Data Warehouse recebe dados de diversas fontes diferentes, normalmente com uma cadência regular, armazena esses dados de maneira eficiênte e alimentam relatórios, painés e ferramentas de análise com os dados."
+    },
+    {
+      "id": 15,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como um Data Warehouse é Arquitetado?",
+      "back": "Com camadas de front-end (disponibiliza as informações para o cliente), camada intermediária (acessa e analisa os dados) e camada inferior (onde os dados são carregados e armazenados)"
+    },
+    {
+      "id": 16,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são os benefícios de usar um Data Warehouse?",
+      "back": "- Tomada de decisão adequada\n- Dados consolidados de várias formas\n- Análise de dados históricos\n- Qualidade, consistência e precisão de dados\n- Separação do processamento analítico dos bancos de dados transicionais"
+    },
+    {
+      "id": 17,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Conceitos essenciais para business intelligence",
+      "back": "ETL\nDW\nOLAP\nPainéis de indicadores\nBig Data"
+    },
+    {
+      "id": 18,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são: DadoXMetadadoXInformação",
+      "back": "- Dado: É o registro de qualquer coisa (não precisa significado)\n- Metadado: É o que descreve outro dado (dá significado ao dado)\n- Informação: É a junção do Dado + Metadado\n- Um dado pode ser um metadado e vice-versa"
+    },
+    {
+      "id": 19,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e quais são as características de Business Intelligence - BI",
+      "back": "- Infraestrutura teórica e tecnológica para organizar e analisar dados de diversas fontes de dados\n- Para BI não se utilizam bancos de dados tradicionais e sim Data Warehouses\n- Caracteristicas de BI -> Visão da corporação, processamento analítico, visa facilitar análises para tomadas de decisão, deve ser histórico, consultas ad-hoc e longas, BD basicamente desnormalizado."
+    },
+    {
+      "id": 20,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são Data Warehouses?",
+      "back": "- São bancos de dados estruturados (normalmente relacionais) que armazena dados homogeneizados e históricos para tomadas de decisão\n- Integra diferentes dados de uma empresa em um único reppositório"
+    },
+    {
+      "id": 21,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Para que servem Data Warehouses?",
+      "back": "- Integrar dados de múltiplas fontes\n- Facilitar o processo de análise sem impactar os sistemas operativos\n- Obter informações de qualidade\n- Atender diferentes tipos de usuários finais\n- Dar flexibilidade e agilidade para atender novas análises\n- Prover mais autonomia ao tomador de decisão"
+    },
+    {
+      "id": 22,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é a definição de Data Warehouse segundo Inmon?",
+      "back": "- É um conjunto de dados orientado por assuntos, não volátil, variável com o tempo e integrado, criado para dar suporte à decisão\n- Orientado por assunto -> Dados são organizados por processo\n- Não volátil -> Basicamente carga em lote e análise de dados\n- Variável com o tempo -> Os dados devem ser históricos\nIntegrado -> Os dados deve estar homogeneizados e consistentes"
+    },
+    {
+      "id": 23,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é a definição de Data Warehouse segundo Kimbal?",
+      "back": "É uma cópia dos dados transacionais especificamente estruturada para consulta e análise, é o lugar onde as pessoas podem acessar seus dados."
+    },
+    {
+      "id": 24,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são os Principais objetivos de Data Warehouses?",
+      "back": "- Prover dados consistentes -> Tratar as heterogeneidades de dados e metadados, garantindo a consistência de valores, nomes e tipos de dados.\n- Ser flexível à mudanças -> Alterações não devem invalidar os dados ou aplicações existentes\n- Ser um lugar seguro -> Controlar o acesso a informações confidenciais da organização.\n- Facilitar o acesso aos dados -> Os dados e metadados devem ser intuitivos para os tomadores de decisão e as ferramentas de acesso aos dados devem ser fáceis de usar.\n- Ser bem aceita pelos tomadores de decisão."
+    },
+    {
+      "id": 25,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é Data Mart?",
+      "back": "- O DW que é um BD otimizado para fornecer uma imagem global da realidade do negócio de uma organização é demorado, complexo e custoso para ser implementado.\n- Para facilitar a implementação, utilizam-se os Data Marts que é um DW específico para um assunto/negócio/processo da organização\n- DM é um subconjunto do DW que satisfaz os requisitos de uma atividade de negócio"
+    },
+    {
+      "id": 26,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais os benefícios de se utilizar Data Marts?",
+      "back": "Redução de tempo, complexidade e custo de implantação"
+    },
+    {
+      "id": 27,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é a restrição para se utilizar Data Marts?",
+      "back": "Requerem planejamento prévio, para evitar ilhas de dados"
+    },
+    {
+      "id": 28,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como podem ser implementados os Data Marts?",
+      "back": "- Os data marts podem ter implementação monolítica, onde os DMs derivam do DW, seguindo a lógica Top-Down, ou podem ter implementação modular, onde os DMs são implementados um de cada vez até ter o DW, seguindo a lógica Bottow-Up\n- Na implementação monolítica os DM/DW podem ser normalizados, já na implementação modular não recomenda-se normaliza-los."
+    },
+    {
+      "id": 29,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é Data Warehousing?",
+      "back": "Processo de Construção do DW"
+    },
+    {
+      "id": 30,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são os elementos básicos do Data Warehousing?",
+      "back": "Os elementos básicos que precisam ser definidos e construidos no processo de data warehousing são, as fontes dos dados, a staging area dos dados, a area de apresentação dos dados e as ferramentas de acesso aos dados."
+    },
+    {
+      "id": 31,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são as fontes de dados no processo de Data Warehousing?",
+      "back": "Para um DW as fontes de dados podem ser as mais variadas possíveis, e as informações sobre essas fontes devem ser levadas em conta no modelo de negócio, informações como disponibilidade dos dados, confiabilidade, formato."
+    },
+    {
+      "id": 32,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é a Staging Area no processo de Data Warehousing?",
+      "back": "- É a área onde os dados são tratados para inserção no DM/DW\n- É nela que é implementado o processo de ETL (Extract-Transform-Load)"
+    },
+    {
+      "id": 33,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é a area de apresentação dos dados no processo de Data Warehousing?",
+      "back": "- É onde os dados são organizados, armazenados e disponibilizados para consulta direta pelos usuários ou ferramentas de relatórios.\n- É basicamente uma série de DM integrados (o DM em si), onde os dados ficam armazenados.\n- Todos os DM devem ser construídos usando dimensões e fatos (esquema dimensional)"
+    },
+    {
+      "id": 34,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são as ferramentas para o usuário final no processo de Data Warehousing?",
+      "back": "- São as ferramentas que apresentam os dados de forma intuitiva e eficiente para o objetivo final do usuário.\n- Elas fazem acesso aos dados"
+    },
+    {
+      "id": 35,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é o modelo dimensional?",
+      "back": "É um tipo de modelagem de armazenamento de dados que tem o objetivo de tornar o esquema do BD mais simples (menos tabelas), intuitivo (com nomes significativos) e otimizado (desnormalizado-poucas junções) para favorecer consultas e análises."
+    },
+    {
+      "id": 36,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são os componentes do Modelo Dimensional",
+      "back": "No modelo dimensional os dados são modelados em tabelas de dimensões, que armazena as propriedades descritivas dos dados e tabelas de fatos que armazena registros dos fatos."
+    },
+    {
+      "id": 37,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são os esquemas estrela, flocos de neve e constelação na modelagem dimensional?",
+      "back": "- Esquema estrela, esquema flocos de neve e esquema constelação são maneiras das tabelas estarem distribuídas na modelagem. \n- No esquema estrela que é o mais simples, as tabelas de fato contém as chaves para as tabelas de dimensões, similar ao esquema floco de neve, a diferença é que no esquema floco de neve as tabelas de dimensões são normalizadas. \n- Já o esquema constelação consiste em vários esquemas estrelas juntos onde as tabelas de fato compartilham as tabelas de dimensões."
+    },
+    {
+      "id": 38,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é o esquema 5 W e 3 H?",
+      "back": "- O 5W3H é uma técnica utilizada na gestão empresarial, já na modelagem de dados pode ser usado como guia para tipificar as tabelas no esquema estrela.\n- Tabela de Fatos -> How many | How much\n- Tabelas de Dimensões -> How | When | Who | What | Where | Why"
+    },
+    {
+      "id": 39,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são as desvantagens de normalizar as tabelas de dimensão?",
+      "back": "- Depois da primeira carga as dimensões crescem pouco ((a tabela de fatos é a que mais cresce, mas esta já é bem normalizada.\n- O espaço economizado é pequeno\n- A perda de performance por conta das junções extras é grande\n- Resumindo: em comparação com o esquema estrela, o esquema floco de neve (que tem as tabelas de dimensões normalizadas) é menos claro, tem maior número de tabelas, têm consultas mais complexas e performance inferior."
+    },
+    {
+      "id": 40,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual a diferença da modelagem tradicional (relacional) e da modelagem dimensional?",
+      "back": "- Na modelagem tradicional o foco é em representar todos os dados e relacionamentos do negócio com a menor redundância possível (normalização).\n- Já na modelagem dimensional o foco é em prover um esquema onde os fatos sejam o foco, sendo fato um registro de medidas que ocorre periodicamente.\n- A partir de um esquema tradicional podem ser criados vários data marts (DM)."
+    },
+    {
+      "id": 41,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é Tabela de Dimensão?",
+      "back": "- As tabelas de dimensões armazenam as descrições dos objetos do negócio, é nela que os dados em si são armazenados. \n- Seus campos armazenam as descrições do negócio e definem os rótulos, as restrições e/ou os agrupamentos dos relatórios.\n- A qualidade de uma tabela de dimensão está diretamente ligada à qualidade dos seus campos"
+    },
+    {
+      "id": 42,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como criar campos com qualidade em uma tabela de dimensão?",
+      "back": "- Os campos devem refletir as terminologias do negócio\n- Os melhores campos são textuais e categóricos, logo, invés de usar idade e salário, pode-se usar faixa etária e faixa salarial, por exemplo.\n- Os rótulos dos campos devem ser intuitivos, sem abreviaturas ou termos desnecessariamente complexos.\n- Não utilizar campos que armazenem valores inteligentes, esses devem ser quebrados de forma intuitiva e seus valores devem ser descrições amigáveis.\n- Os campos podem ter múltiplas hierarquias implícitas além de outros campos que são usados para definir agrupamentos. Por exemplo, para uma tabela de dimensão de tempo podem existir campos de diversos níveis hierárquicos, como ANO que seria um nível mais alto e DIA que seria um nível mais baixo."
+    },
+    {
+      "id": 43,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e como funciona a granularidade de uma tabela de dimensão?",
+      "back": "- Granularidade é uma medida que tem relação com o nível de detalhe de uma tabela.\n- É inversamente proporcional ao nível de detalhe dos dados, ou seja, quanto mais detalhado são os dados, menor é a granularidade.\n- Em uma tabela de dimensão, o campo de menor hierarquia é o que define o grão da dimensão.\n- Na tabela de dimensão tempo por exemplo, se só existe um campo para ano então a tabela tem alta granularidade, já se existe campo para hora e segundo a tabela tem baixa granularidade."
+    },
+    {
+      "id": 44,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são as principais características de uma tabela de dimensão?",
+      "back": "- Possuem normalmente muitos campos (dezenas), mas poucos registros (poucos milhares), geralmente o volume de dados de todas as dimensões não chega a 10% do volume de dados do DW.\n- São normalmente desnormalizadas (estrela-1FN), mas podem ser normalizadas (floco de neve-3FN)\n- Tem PK simples, sendo elas Surrogate Keys ou seja, chaves artificiais que são geradas automaticamente de maneira incremental sem relação com os outros campos. O uso dessas chaves garantem a estabilidade/neutralidade pois ficam transparentes para os usuários, servindo apenas como ligação entre dimensões e fatos."
+    },
+    {
+      "id": 45,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais cuidados devem ser tomados ao lidar com tabelas de dimensões?",
+      "back": "- Manter as SK quando houver reprocessamento de ETL\n- Evitar chaves do tipo data, inteligente ou natural, pois tem tamanhos exagerados e demandam um campo extra para fazer o versionamento.\n- Usar chave natural apenas para manter o vínculo com a fonte de dados"
+    },
+    {
+      "id": 46,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e quais são as principais características de uma tabela de fato?",
+      "back": "- Tabelas de fatos são tabelas que armazenam observações ou eventos, geralmente envolvendo medidas registradas em um período de tempo.\n- São basicamente normalizadas (3FN)\n- São formadas principalmente por FK e por medidas\n- Na prática, dificilmente tem PK. Quando for necessário é mais performático utilizar uma SK\n- Tem muitas linhas, na casa dos M e B que crescem a cada carga. Tem poucas colunas que consistem das FKs para as dimensões e medidas.\n- Representa cerca de 90% do volume de dados do DW\n- São equivalentes a relacionamentos n-ários\n- Podem ser criadas sem medidas (factless fact table), geralmente essas são usadas para registrar a cobertura/abrangência de alguma ação."
+    },
+    {
+      "id": 47,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é um fato?",
+      "back": "- Fato é um registro da tabela de fato\n- Consiste na interseção entre as FK para as dimensões + medida(s)\n- As dimensões definem o grão da tabela de fatos"
+    },
+    {
+      "id": 48,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são medidas na tabela de fatos?",
+      "back": "- Medida são campos geralmente numéricos que devem ser continuamente valorados, geralmente são obtidas a partir da medição de alguma variável do negócio.\n- As medidas podem ser derivadas/calculadas\n- É aconselhado dar preferência para medidas perfeitamente aditivas (que podem ser utilizadas por group by/sum)."
+    },
+    {
+      "id": 49,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "As medidas podem ser textuais?",
+      "back": "- As medidas também podem ser textuais, geralmente utilizando uma lista de valores, como por exemplo a avaliação de atendimento (‘bom’, ‘ruim’, ‘péssimo’), nesse caso as operações aditivas não são utilizadas.\n- É aconselhado transformar medidas textuais em descrições das dimensões pois consome menos espaço e fica correlacionadas de forma mais eficaz com os outros campos da dimensão."
+    },
+    {
+      "id": 50,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como são classificadas as medidas numéricas?",
+      "back": "- São classificadas em Aditivas, Semi-aditivas ou Não-aditivas\n- Aditiva -> quando o operador SUM pode ser usado ao longo de todos os campos das dimensões\n- Semi-aditiva -> quando o operador SUM só pode ser usado ao longo de alguns campos das dimensões\n- Não-aditiva -> quando o operador SUM não pode ser usado ao longo de todos os campos das dimensões."
+    },
+    {
+      "id": 51,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais as características das medidas aditivas?",
+      "back": "Nas aditivas a soma (GROUP BY/ SUM) podem ocorrer por qualquer campo de qualquer dimensão. Geralmente elas quantificam o que ocorre nas transações (valor vendido, valor de custo, quantidade vendida…)"
+    },
+    {
+      "id": 52,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais as características das medidas semi-aditivas?",
+      "back": "- Nas semi-aditivas a soma (GROUP BY/ SUM) não pode ocorrer por qualquer campo de qualquer dimensão. Geralmente capturam um instante da realidade (quantidade em estoque, saldo em conta…). \n- Por esse motivo, normalmente só podem ser somadas pelos campos de mais baixa granularidade da dimensão data.\n- Ex: só faz sentido somar saldo, estoque e funcionário por mês se a TF tiver granularidade mês, pois se a granularidade for dia vai ter soma duplicada.\n- Para sumarizar por outros campos, deve-se explorar funções de agregação (AVG, MIN, MAX, COUNT)."
+    },
+    {
+      "id": 53,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais as características das medidas não-aditivas?",
+      "back": "- Não podem ser somadas por campo algum de qualquer dimensão \n- Pode-se explorar com funções de agregação como AVG, MIN, MAX, COUNT\n- Ex: valor unitário, temperatura, precipitação, umidade, ou qualquer indicador calculado a partir de uma razão como percentuais, taxas, coeficientes e índices.\n- Alternativamente podem ser modeladas como faixa de valores ou categorias em uma dimensão."
+    },
+    {
+      "id": 54,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são os tipos de tabelas de fatos?",
+      "back": "As tabelas de fato podem ser de transação (transaction), instantâneo periódico (periodic snapshot) ou instantâneo acumulado (accumulating snapshot)"
+    },
+    {
+      "id": 55,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e como funciona uma tabela de fato do tipo transacional?",
+      "back": "- Tabela de fatos do tipo transacional é a mais comum, nela a cada carga (mesmo que não seja diária) captura detalhadamente todos os fatos/transações ocorridos. Obs. Não confundir carga com granularidade\n- A granularidade de cada linha da TF representa, no menor nível de detalhe, um evento ocorrido ou transação realizada.\n- Em geral, esse tipo de tabela faz uso de medidas aditivas\n- Ex: TF sobre transações de vendas ou transações de inventário de estoque."
+    },
+    {
+      "id": 56,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e como funciona uma tabela de fato do instantâneo periódico?",
+      "back": "- Na tabela de fato do tipo instantâneo periódico a cada carga (mesmo que seja diária), é capturada apenas uma fotografia do estado atual dos dados.\n- A granularidade de cada linha da TF registra um status dos fatos em um dado período (diário, semanal, mensal…)\n- Em geral esse tipo de tabela faz uso de medidas semi-aditivas\n- Ex: TF sobre inventário básico de produtos."
+    },
+    {
+      "id": 57,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e como funciona uma tabela de fato do instantâneo acumulado?",
+      "back": "- Na tabela de fato do tipo instantâneo acumulado a cada carga (mesmo que não seja diária), é registada (insert+updates) múltiplas datas representando estágios diferentes do fato/transação\n- É semelhante a TF de transação, captura detalhadamente todos os fatos/transações ocorridos, mas considera os diferentes estágios do fato sem ter que aumentar a quantidade de linhas da TF.\n- A granularidade de cada linha da TF representa, no menor nível de detalhe, um evento ocorrido ou transação realizada ao longo de diferentes momentos/estágios temporais.\n- Cada linha da TF sofrerá N-1 atualizações (updates) até o fato/transação ser registrado por completo (N=qnt de datas)\n- Em geral esse tipo de tabela faz uso de medidas aditivas\n- Ex: TF com data de recebimento, data de inspeção, data de venda e data de transporte."
+    },
+    {
+      "id": 58,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como é a densidade das TF?",
+      "back": "- Em uma TF de transação e instantâneo acumulado normalmente são esparsas. Ex: em vendas nem todo produto é vendido diariamente\n- Em uma TF de instantâneo periódico normalmente é densa. Ex: Em estoque, mesmo que um produto não seja vendido, sua quantidade disponível é registrada (uma linha para cada produto)."
+    },
+    {
+      "id": 59,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Comparação entre os tipos de TFs:",
+      "back": "- Período de Tempo: T: Um ponto no tempo, IP: Regular intervalos pré-definidos, IA: Indeterminado normalmente de curta duração.\n- Grão: T: Uma linha por transação, IP: Uma linha por período, IA: Uma linha por tempo de vida.\n- Cargas: T: Insert, IP: Insert, IA: Insert e Update.\n- Atualizações: T: Raramente, IP: Raramente, IA: Constante.\n- Dimensão Data/Tempo: T: Data da transação, IP: Data do final do período, IA: Várias datas para várias etapas.\n- Fatos: T: Registrados por transação, IP: Registrados por intervalos pré-definidos no tempo, IA: Registrados ao longo de uma linha de tempo finita."
+    },
+    {
+      "id": 60,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e qual é a estrutura da Matriz de Barramento do DW?",
+      "back": "- A matriz de barramento é uma matriz que mostra as interseções entre as tabelas de dimensão e os subprocessos do negócio (tabelas de fato).\n- Provê uma visão global e integrada do DW e facilita o seu desenvolvimento incremental a partir de dimensões e fatos conformados.\n- É necessária pois construir o DW em uma única etapa é muito custoso e arriscado, mas construir como peças isoladas pode comprometer a visão integrada, logo, usando a matriz de barramento tem-se uma visão mais geral do compartilhamento das tabelas de dimensões entre os negócios.\n- Serve como uma ferramenta para criar, documentar e comunicar o projeto do DW.\n- Na matriz de barramento as linhas são as TFs do DW e as colunas são as dimensões conformadas"
+    },
+    {
+      "id": 61,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que a matriz de barramento permite?",
+      "back": "- Permite que diferentes DMs possam ser implementados por equipes diferentes em momentos diferentes.\n- Permite que diferentes DMs possam ser conectados, provendo uma visão integrada de todo DW\n- Permite o compartilhamento de um conjunto de dimensões conformada “conformed dimensions”\n- Todos os processos da organização criarão uma família de modelos dimensionais que compartilham um conjunto de dimensões comuns e conformadas.\n- Permite visualizar imediat\tamente as dimensões que merecem uma atenção especial (prioridade) dada a sua participação em várias TFs"
+    },
+    {
+      "id": 62,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é dimensão conformada?",
+      "back": "Uma Dimensão Conformada (também chamada de Dimensão Compartilhada ou Dimensão Mestre) é uma dimensão que possui o mesmo significado para todas as Tabelas Fato que podem fazer junção à mesma."
+    },
+    {
+      "id": 63,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Alguns fatos sobre dimensão conformada.",
+      "back": "- Podem ser replicadas ou um subconjunto da dimensão mais detalhada\n- Podem ser incompletas como umas única tabela física ou como cópias sincronizadas (no mesmo ETL)\n- Seus campos devem ser consistentes (i.e. mesmos nomes, tipos, tamanhos, valores, …)\n- Devem ser construídas de forma sincronizada na área de preparo dos dados (data staging area)\n- São essenciais para a concepção de DM “integráveis”\n- Exigem muita coordenação de execução\n- Permitem combinar em um único relatório/consulta as medições de desempenho de processos diferentes"
+    },
+    {
+      "id": 64,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são as características de DM com dimensões não conformadas?",
+      "back": "- Não são facilmente/perfeitamente integrados\n- Não permitem análises através de diferentes tabelas de fatos\n- Podem produzir relatórios com rótulos e/ou agrupamentos inconsistentes"
+    },
+    {
+      "id": 65,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Na criação de dimensões conformadas a partir de outra dimensão, como funciona a PK?",
+      "back": "- No caso da nova dimensão ser criada com atributos já existentes na antiga e a granularidade ser menor, deve-se criar uma nova pk\n- No caso da nova dimensão ser criada com novos atributos mas com a granularidade igual deve-se manter a PK. (Ex: se alguns atributos só fazem sentido em algumas TF, deve-se criar uma nova dimensão idêntica a original e adicionar os atributos específicos na nova dimensão)\n- A dimensão Data pode ser um caso particular onde com granularidade diferente e atributos que já existem a PK seria a mesma. (Ex: TF venda em “dia” e TF estoque em “mês”, nesse caso cria-se uma nova dimensão Data a partir da dimensão original, exclui-se os atributos sem sentido (e.g., flag de feriado, fim de semana…) e faz-se a nova PK = a PK da data do primeiro/último dia do mês)"
+    },
+    {
+      "id": 66,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a gestão das dimensões conformadas?",
+      "back": "- A gestão das dimensões conformadas é atribuída a um grupo chamado de autoridade da dimensão.\n- Este grupo é responsável por definir, manter e publicar uma dimensão particular, ou seus subconjuntos para todos os clientes de DM que dela necessitam.\n- Modificações em atributos existentes ou a adição de novos atributos devem ser revistos com todas as equipes de DM"
+    },
+    {
+      "id": 67,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são fatos conformados?",
+      "back": "- Fatos conformados são fatos que são os mesmos para diferentes DMs\n- Em geral, as medidas da tabela de fatos não estão duplicadas em vários DM\n- Se uma medida existe em mais de um DM, então seu nome, tipo, unidade e cálculo devem ser o mesmo.\n- Se é impossível conformar algumas medidas, então seus nomes devem ser diferentes para deixar claro que são medidas diferentes e evitar erros. (e.g. ValorEmReal e ValorEmDolar; Qtd_kg e Qtd_t)"
+    },
+    {
+      "id": 68,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são as fases do projeto dimensional?",
+      "back": "As fases do projeto dimensional são 4: \n- 1 Selecionar o processo de negócio\n- 2 Declarar o grão\n- 3 Identificar as dimensões\n- 4 Identificar as medidas"
+    },
+    {
+      "id": 69,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é e como funciona a primeira fase do projeto dimensional?",
+      "back": "- A primeira fase do projeto dimensional é selecionar o processo de negócio de será modelado\n- Lembrando que processos são atividades realizadas em organizações (Ex: vendas, compras de matéria prima, pedidos, expedições, faturamento, inventário, contas a pagar/receber)\n- Obs. Processos são diferentes dos departamentos da organização, um departamento pode ter vários processos e um processo pode estar ligado a diferentes departamentos.\n- Deve-se responder qual é o processo mais crítico e viável."
+    },
+    {
+      "id": 70,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é e como funciona a segunda fase do projeto dimensional?",
+      "back": "- A segunda fase do projeto dimensional é declarar o grão, que é o nível de detalhe da tabela de fatos, ou seja, é especificar o que uma linha da TF representa. (Ex: uma linha de um cupom fiscal, um cartão de embarque individual ou um nível diário de estoque de cada produto)\n- Deve-se responder o que deve descrever uma linha na TF?\n- Pode-se descobrir nos passos 3 ou 4 que o grão não está adequado, nesse caso deve-se retornar a esse passo."
+    },
+    {
+      "id": 71,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é e como funciona a terceira fase do projeto dimensional?",
+      "back": "- A terceira fase do projeto dimensional é identificar as dimensões.\n- Deve-se responder: Como o pessoal do negócio descreve os dados do processo de negócio? (Ex. data, produto, cliente, tipo de transação, status do pedido)\n- Se o grão é bem definido, as dimensões são facilmente identificadas.\n- A partir da escolha das dimensões, defini-se seus atributos"
+    },
+    {
+      "id": 72,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual é e como funciona a quarta fase do projeto dimensional?",
+      "back": "- A quarta fase do projeto dimensional é definir as medidas da TF do DM, nesse caso deve-se responder: o que vamos medir? (Ex: quantidade comprada, valor vendido…)\n- As medidas devem ser coerentes com o grão do passo 2. (Para saber as vendas por período do dia, deve-se ter uma dimensão tempo e o sistema operativo deve registrar o instante de cada venda)"
+    },
+    {
+      "id": 73,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e qual a importância da dimensão data?",
+      "back": "- É uma das dimensões mais frequentes e relevantes do DW pois é importante para garantir o histórico dos dados\n- No mundo real, a dimensão da data costuma ser complexa: Dia, Mês, Período Fiscal, Semana de Cinco Dias, Feriados, Fim de Semana, Trimestre, Ano….\n- É importante definir o nível de detalhe (granularidade) ideal para o projeto.\n- Geralmente uma granularidade diária é suficiente pois permite flexibilidade para agregar os dados por níveis temporais maiores e atende adequadamente às mudanças nos requisitos do negócio.\n- Diferente das outras dimensões, a data pode ser carregada antecipadamente, de uma só vez e não requer fonte de dados.\n- Também pode-se criar uma dimensão de tempo para evitar a sobrecarga da dimensão data."
+    },
+    {
+      "id": 74,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como gerenciar dimensões com grandes volumes e alta volatilidade?",
+      "back": "- Fragmentar a tabela de dimensão grande em tabelas de dimensões menores, separando dados estáticos de dados voláteis\n- Esta deve estar ligada com a tabela de fato (para guardar o histórico) e pode estar relacionada com a dimensão base (para saber o valor atual)\n- As várias tabelas fragmentadas de uma dimensão grande são também chamadas de minidimensões."
+    },
+    {
+      "id": 75,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são e para que servem as minidimensões?",
+      "back": "- Minidimensões são subconjuntos de uma dimensão grande (não é uma normalização)\n- Ajudam a controlar o crescimento explosivo de uma dimensão grande com atributos que mudam rapidamente.\n- Seus atributos devem ter baixa cardinalidade (Criar faixa de valores ou categorias para os atributos com valores contínuos (redução do número de combinações - diminuir a cardinalidade))\n- Tamanho de cada minidimensão é igual ao produto cartesiano da cardinalidade dos atributos da minidimensão."
+    },
+    {
+      "id": 76,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são e para que servem as dimensões outrigger?",
+      "back": "- É uma minidimensão que deve estar ligada apenas a dimensão base onde a dimensão base contém uma FK para o atual valor da “outrigger”\n- Dimensões “Outrigger” devem ser a exceção e não a regra"
+    },
+    {
+      "id": 77,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são e para que servem as dimensões bugiganga?",
+      "back": "- As dimensões bugigangas reúnem campos da TF que têm pouca correlação e servem como filtros (Ex: Flags e atributos soltos)\n- É usada como artifício para diminuir a quantidade de campos da TF\n- Para cria-los deve-se estudar cada caso e criar uma ou mais dimensões “bugiganga” a partir desses campos extraídos da TF"
+    },
+    {
+      "id": 78,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são e para que servem dimensões degeneradas?",
+      "back": "- Dimensões degeneradas são chaves de uma dimensão na tabela de fatos sem uma tabela de dimensão correspondente.\n- Existem pois a informação tem a mesma granularidade da TF, não valendo a pena criar uma nova dimensão, pois a cardinalidade com a TF seria 1:1, criar uma dimensão geraria uma sobrecarga, desnecessária, no DW.\n- Ex: número de uma transação, número de fatura, tíquete, nota fiscal, pedido ou ordem de compra. Essas informações normalmente correspondem a item, e se item for a granularidade da TF, essa informação estará na tabela de fato para permitir o agrupamento por item."
+    },
+    {
+      "id": 79,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que são e para que servem dimensões com papéis?",
+      "back": "- Uma dimensão pode aparecer várias vezes (com papeis diferentes) na TF\n- A solução é feita em SQL para implementar Dimensões com papéis. (Criar uma view para cada papél, cada view deve ter nomes diferentes para os campos - incluindo a PK -, assim cada view será vista como uma tabela/dimensão independente nos relatórios)"
+    },
+    {
+      "id": 80,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como lidar quando uma mesma dimensão pode ser relacionada multiplas vezes na tabela de fatos (relacionamento M:N)?",
+      "back": "- Existem várias abordagens como ignorar a dimensão que é multivalorada, escolher uma valor e omitir os restantes, estender a lista de dimensões para ter um número fixo, colocar uma tabela ponte entre a tabela de fatos e a tabela de dimensão que é multivalorada.\n- A tabela ponte serve como uma tabela para armazenar a relação M:N (pode-ser utilizado um fator de peso, que é o peso que um registro tem em um dado grupo, lembrando que a soma dos fator de peso de todos os diagnósticos de uma dado grupo deve ser igual a 100 ou 1)."
+    },
+    {
+      "id": 81,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como lidar com produtos heterogêneos?",
+      "back": "- Determinadas organizações oferecem uma variedade de produtos, cada um com descrições e medidas específicas, como consequência muitos valores “não se aplica” aparecem na dimensão produto e valores vazios na tabela de fatos.\n- Para estes modelos dimensionais, recomenda-se a criação de uma dimensão geral e de dimensões específicas para os produtos/serviços\n- Da mesma forma, será necessário uma TF geral e TFs específicas para cada produto/serviço\n- As descrições e medidas gerais devem ser duplicadas nas tabelas de dimensão e de fatos específicas (isto elimina a necessidade de acessar duas TF e/ou dimensões)"
+    },
+    {
+      "id": 82,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como lidar com novos atributos na dimensão?",
+      "back": "- Analisar o grão do atributo\n- Se for igual ou mais alto, criar o novo atributo na dimensão e preencher os seus registros antigos com valores corretos.\n- Se os registros antigos do novo atributo não estiverem disponível, deve-se preenchê-lo com um texto significativo (ex: ‘indisponivel’)."
+    },
+    {
+      "id": 83,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como lidar com novas dimensões?",
+      "back": "- Criar a nova dimensão\n- Adicionar a nova FK na tabela de fatos e preenche-la corretamente com os valores da PK da nova dimensão.\n- Se os registros antigos da nova dimensão não estão disponíveis, deve-se preencher a FK da tabela de fatos com uma PK significativa (ex: 1=antes da adição da dimensão X)"
+    },
+    {
+      "id": 84,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como lidar com novas medidas?",
+      "back": "- Adicionar a nova medida na tabela de fatos e preenche-la/calcula-la corretamente\n- Se a nova medida tem granularidade diferente, criar uma nova tabela de fatos sem as medidas originais\n- Se os registros antigos da nova medida não estão disponíveis, deve-se preenche-la com NULL"
+    },
+    {
+      "id": 85,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como baixar a granularidade (aumentar o detalhamento) da dimensão?",
+      "back": "- Criar uma nova dimensão tentando aproveitar os atributos da dimensão original (menos detalhada), adicionar os atributos pertinentes e reconstruir a PK da nova dimensão.\n- Dimensões mais detalhadas podem afetar a tabela de fatos, neste caso, deve-se reconstruir a tabela de fatos (avaliar o impacto nas aplicações existentes)"
+    },
+    {
+      "id": 86,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como tratar uma nova fonte de dados?",
+      "back": "- Se a nova fonte de dados tem sua própria granularidade e dimensionalidade deve-se criar um novo DM\n- Caso contrário, tratar a nova fonte de dados no DM pertinente (ter cuidado para não forçar uma compatibilização espúria)"
+    },
+    {
+      "id": 87,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é o SCD e quais são os tipos?",
+      "back": "- Slowly Changing Dimensions (SCD) é a técnica utilizada para fazer atualização de dados nas dimensões, existem diferentes técnicas.\nSCC0: Não faz nada\nSCD1: Sobrescrever o valor\nSCD2: Adiciona uma linha na dimensão\nSCD3: Adiciona uma coluna na dimensão\nSCD4: Criar uma minidimensão com os dados voláteis\nSCD5: SCD4 + SCD1\nSCD6 : SCD1 + SCD2 + SCD3\nSCD7: Duas FK na TF + SCD1 + SCD2\n- Os dois tipos de SDC mais usados são SC1 e SCD2, principalmente o SCD2"
+    },
+    {
+      "id": 88,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD1?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD1 consiste em sobrescrever o valor antigo pelo novo, perdendo o histórico dos valores do atributo\n- Não exige um novo valor de PK para a dimensão e nem para a TF\n- É a estratégia mais simples e rápida de implementar mas não registra histórico\n- É indicada para a correção de cargas erradas de valores de atributos ou informações irrelevantes (ex. CPF e Telefone)"
+    },
+    {
+      "id": 89,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD2?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD2 consiste em adicionar uma linha na dimensão, nesse caso as mudanças são registradas a partir da inserção de novas linhas (novas SKs na dimensão e na fatos)\n- Segmenta perfeitamente o histórico do DW\n- É a estratégia predominante para registrar o histórico do DW\n- Ter atenção quando aplicar em dimensões grandes (pode ser inapropriada/custosa)"
+    },
+    {
+      "id": 90,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD3?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD3 consiste em criar uma nova coluna para cada informação que se deseja manter o valor atual ou prévio (se utiliza da SCD1 para atualizar o valor atual e prévio)\n- Não exige um novo valor de PK para a dimensão e nem para a TF\n- É indicada quando o usuário contenta-se com um histórico limitado (valor atual e valor prévio)\n- É útil para comparar simultaneamente o valor atual com o valor original ou prévio"
+    },
+    {
+      "id": 91,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD4?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD4 consiste em criar uma minidimensão com os dados mais voláteis\n- As PKs da dimensão e minidimensão são geradas de forma independente e ambas devem estar registradas na TF\n- A dimensão base armazena os dados estáticos e o histórico é obtido a partir do relacionamento entre a MD e TF\n- É indicada para controlar o crescimento das dimensões"
+    },
+    {
+      "id": 92,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD5?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD5 consiste em criar uma visão da minidimensão que vai corresponder a uma dimensão outrigger ou faz um relacionamento direto entre a minidimensão e a dimensão base (simulando uma dim outrigger)\n- As PKs da dimensão e minidimensão continuam sendo geradas de forma independente e ambas continuam sendo registradas na TF. Contudo, a PK da visão ou dimensão outrigger vai como FK para a dimensão base (a FK vai ser atualizada via SDC1)\n- É indicada para controlar o crescimento das dimensões e obter o valor atual via FK com a visão ou dimensão outrigger, evitando join com a TF."
+    },
+    {
+      "id": 93,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD6?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD6 consiste em usar as técnicas SCD3, SCD1 e SCD2 em conjunto.\n- Usar a SCD3 para manter os valores anteriores e atuais do atributo\n- Usar a SCD1 para substituir todos os registros da versão atual do atributo\n- Usar a SCD2 para manter o histórico do atributo\n- É indicada quando o usuário deseja comparar simultaneamente o valor atual com o valor original ou prévio, mantendo todo o histórico\n- Complexa de ser implementada"
+    },
+    {
+      "id": 94,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a técnica SCD7?",
+      "back": "- A técnica de atualização de dados nas dimensões SCD7 consiste em adotar duas FK na TF e as técnicas SCD1 e SCD2. \n- Entrega o mesmo resultado da SCD6, mas usando duas FK (histórico via SCD2 e atual via SCD1) na TF\n- É indicada quando o usuário deseja analisar o histórico e o valor atual (cuidado, pois não é 100% real) de maneira menos complexa"
+    },
+    {
+      "id": 95,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como saber qual SCD usar?",
+      "back": "- Deve-se perguntar e documentar:\n- Para quais atributos posso manter apenas o valor atual?\n- Para quais atributos devo manter o histórico completo?\n- Para quais atributos posso manter apenas as versões anteriores/atuais?\n- Qual é o volume de dados atualmente e para os próximos 5 anos?\n- Na dúvida sempre optar pelo SCD2 pois é o melhor para manter o histórico."
+    },
+    {
+      "id": 96,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é cubo de dados?",
+      "back": "- É uma metáfora para visualização e organização dos dados.\n- Onde várias dimensões podem ser analisadas simultaneamente\n- Os dados (membros) são manipulados mais rapidamente e facilmente (agregação em níveis de hierarquia)"
+    },
+    {
+      "id": 97,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é e quais são as características do OLAP?",
+      "back": "- OLAP é um conjunto de tecnologias para analisar o DW/Cubo de Dados\n- Fornece dados em alto nível (totais, media, min…)\n- Tem alta performance e consultas fáceis e interativas\n- Lida com dados históricos (dimensão temporal)\n- Faz cruzamento de dados (cubo de dados)\n- Analisa dados em diferentes níveis de detalhes (hierarquia)"
+    },
+    {
+      "id": 98,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são as principais operações OLAP?",
+      "back": "- Drill Down e Roll Up -> São técnicas para caminhar pelos níveis de hierarquia dos dados e permitem ver diferentes níveis de detalhes. Drill Down -> do nivel de menos detalhe para mais detalhe. Roll Up/Drill -> Contrário\n- Rotação -> Técnica que gira o cubo, permitindo diferentes visões dos dados\n- Slice e Dice -> Técnicas que fatiam o cubo, permitindo restringir a análise aos dados, sem inversão de eixos (semelhante as cláusulas SELECT e WHERE de SQL)"
+    },
+    {
+      "id": 99,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "O que é treliça de agregados?",
+      "back": "- É uma estrutura que define a hierarquia de operações group-by no cubo\n- Cada cuboid (nó) é um agregado formado por uma agregação simples (select … from … group by …)\n- A treliça é um grafo direcionado onde uma aresta a, entre dois nós n e m, direcionada de n para m, indica que m pode ser obtido através de n."
+    },
+    {
+      "id": 100,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Quais são as arquiteturas OLAP?",
+      "back": "As arquiteturas olap são:\n- Relacional OLAP -> ROLAP\n- Multidimensional OLAP -> MOLAP\n- Híbrido OLAP -> HOLAP"
+    },
+    {
+      "id": 101,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a arquitetura ROLAP?",
+      "back": "- Utiliza BD relacional para fazer análise dos fatos\n- Utiliza SQL para manipular os dados de forma multidimensional\n- Lida com fatos atômicos assim como sumarizados\n- Trabalha em ambientes din micos e muitas dimensões"
+    },
+    {
+      "id": 102,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a arquitetura MOLAP?",
+      "back": "- Utiliza MDDB proprietários (com matrizes n-dimensionais) para manipular fatos agregados\n- Tem como premissa principal armazenar de forma multidimensional para visualizar de forma multidimensional\n- Tem como desvantagem o fato de que não manipula fatos atômicos, não trabalha com muitas dimensões e não gerencia um grande volume de dados."
+    },
+    {
+      "id": 103,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Como funciona a arquitetura HOLAP?",
+      "back": "- Mistura de MOLAP com ROLAP\n- Suporta manipulação de fatos atômicos e agregados\n- Utiliza MDDB para analisar os fatos agregados\n- Utiliza SQL para manipular fatos atômicos\n- É mais complexo para administrar e implementar"
+    },
+    {
+      "id": 104,
+      "create_date": "20/10/2024",
+      "tags": [
+        "DATA WAREHOUSE",
+        "DADOS"
+      ],
+      "front": "Qual a diferença entre as arquiteturas MOLAP, HOLAP e ROLAP na questão de armazenamento e perspectiva do cliente?",
+      "back": "- Armazenamento dos Dados de Base -> M: Cubo H: Tabela Relacional R: Tabela Relacional\n- Armazenamento das Agregações -> M: Cubo H: Cubo R: Tabela Relacional\n- Perspectiva do cliente no quesito performance de consulta -> M: Imediato H: mais rápido R: rápido\n- Perspectiva do cliente no quesito consumo em disco -> M: Alto H: Médio R: Baixo\n- Perspectiva do cliente no quesito manutenção do cubo -> M: Alto H: Médio R: Baixo"
     }
   ],
   "tags": [
     "DADOS",
     "BI",
     "CSS",
-    "PROPRIEDADE CSS"
+    "PROPRIEDADE CSS",
+    "DATA WAREHOUSE"
   ]
 }
