@@ -75,6 +75,7 @@ export default function FlashcardList(props: any) {
                     ))}
                 </div>
             </div>
+            {/* Adicionar aqui inicio da tabela de rolamento */}
             <div>
                 {
                 
@@ -82,6 +83,7 @@ export default function FlashcardList(props: any) {
                     <FlashcardItem key={flashcard['id']} flashcard={flashcard} />
                 ))}
             </div>
+            {/* fim da tabela de rolamento */}
         </div>
     )
 }
