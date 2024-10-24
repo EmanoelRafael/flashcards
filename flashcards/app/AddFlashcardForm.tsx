@@ -35,7 +35,6 @@ export default function AddFlashcardForm() {
   };
 
   const handleFileUpload = async () => {
-    // Valida o formato do arquivo (deve ser .csv)
     if (!file) {
       console.log("nenhum arquivo selecionado");
       setErrorMessage("Nenhum arquivo selecionado");
@@ -51,20 +50,20 @@ export default function AddFlashcardForm() {
     const formData = new FormData();
     const text = await file.text()
     console.log(text)
-    formData.append("file", file); // Adiciona o arquivo ao FormData
+    formData.append("file", file); 
     const formDataArray = Array.from(formData.entries());
     console.log(formDataArray);
     try {
       console.log("Vou enviar")
       const res = await fetch('http://localhost:3002/upload_flashcards_file', {
         method: 'POST',
-        body: formData, // Envia o FormData com o arquivo
+        body: formData, 
       });
 
       if (res.ok) {
         setSuccessMessage("Arquivo enviado com sucesso");
         console.log("enviei")
-        setFile(null); // Limpa o arquivo após o envio
+        setFile(null); 
       } else {
         setErrorMessage("Erro ao enviar o arquivo");
       }
