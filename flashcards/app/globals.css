@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.container {
-  /*background-color: rgb(85, 190, 168);*/
-}
 
 .flashcard_list {
   display: flex;

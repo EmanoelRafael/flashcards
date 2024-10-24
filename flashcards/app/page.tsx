@@ -1,7 +1,4 @@
-import { useState } from "react";
-import Image from "next/image";
 import AddFlashcardForm from './AddFlashcardForm';
-import { Alert } from "flowbite-react";
 import NavBar from './NavBar';
 import FlashcardList from "./FlashcardList";
 

@@ -78,7 +78,6 @@ export default function FlashcardList(props: any) {
             {/* Adicionar aqui inicio da tabela de rolamento */}
             <div>
                 {
-                
                 filteredFlashcards.map((flashcard: any) => (
                     <FlashcardItem key={flashcard['id']} flashcard={flashcard} />
                 ))}
