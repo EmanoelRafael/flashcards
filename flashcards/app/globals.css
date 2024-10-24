@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 
-.flashcard_list {
+/*.flashcard_list {
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 5px black;
-}
+} */
 
 .flashcard_item {
   background-color: blueviolet;
