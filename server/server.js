@@ -115,7 +115,7 @@ const validateFile = (req, res, next) => {
 app.get('/flashcards_list', async (req, res) => {
 
     const json_content = await readJSONFile(path.join(__dirname, 'flashcards.json'));
-    console.log('Dados JSON carregados:', json_content);
+    //console.log('Dados JSON carregados:', json_content);
 
     await delay(2000);
     
@@ -125,7 +125,7 @@ app.get('/flashcards_list', async (req, res) => {
 app.post('/add_flashcard', async (req, res) => {
     const newFlashcard = req.body;
     
-    console.log(newFlashcard)
+    //console.log(newFlashcard)
     if (!newFlashcard.front || !newFlashcard.back) {
         return res.status(400).send('Os campos "front" e "back" são obrigatórios.');
     }

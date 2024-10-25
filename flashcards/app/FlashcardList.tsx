@@ -104,7 +104,7 @@ export default function FlashcardList(props: any) {
                     ))}
                 </div>
             </div>
-            <div className="w-[95vw] h-[70vh] overflow-y-auto p-4 mx-auto border-4 border-black rounded-2xl">
+            <div className="w-[95vw] h-[70vh] overflow-y-auto p-4 mx-auto border-2 border-emerald-300 rounded-2xl">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                     {
                     filteredFlashcards.map((flashcard: any) => (
