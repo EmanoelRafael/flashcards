@@ -27,6 +27,10 @@ export default function FlashcardList(props: any) {
         return isValid; 
       }
 
+    function onDelete(id: string) {
+        console.log(`Excluir flashcard com ID: ${id}`)
+    }
+
     const handleTagInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTagInput(e.target.value);
     };
@@ -79,7 +83,7 @@ export default function FlashcardList(props: any) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
                     {
                     filteredFlashcards.map((flashcard: any) => (
-                        <FlashcardItem key={flashcard['id']} flashcard={flashcard} />
+                        <FlashcardItem key={flashcard['id']} flashcard={flashcard} onDelete={onDelete} />
                     ))}
                 </div>
             </div>
