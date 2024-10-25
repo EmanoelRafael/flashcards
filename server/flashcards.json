@@ -1024,16 +1024,6 @@
       ],
       "front": "Como funciona a arquitetura HOLAP?",
       "back": "- Mistura de MOLAP com ROLAP\n- Suporta manipulação de fatos atômicos e agregados\n- Utiliza MDDB para analisar os fatos agregados\n- Utiliza SQL para manipular fatos atômicos\n- É mais complexo para administrar e implementar"
-    },
-    {
-      "id": 104,
-      "create_date": "20/10/2024",
-      "tags": [
-        "DATA WAREHOUSE",
-        "DADOS"
-      ],
-      "front": "Qual a diferença entre as arquiteturas MOLAP, HOLAP e ROLAP na questão de armazenamento e perspectiva do cliente?",
-      "back": "- Armazenamento dos Dados de Base -> M: Cubo H: Tabela Relacional R: Tabela Relacional\n- Armazenamento das Agregações -> M: Cubo H: Cubo R: Tabela Relacional\n- Perspectiva do cliente no quesito performance de consulta -> M: Imediato H: mais rápido R: rápido\n- Perspectiva do cliente no quesito consumo em disco -> M: Alto H: Médio R: Baixo\n- Perspectiva do cliente no quesito manutenção do cubo -> M: Alto H: Médio R: Baixo"
     }
   ],
   "tags": [
