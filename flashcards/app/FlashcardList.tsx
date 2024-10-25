@@ -10,7 +10,7 @@ export default function FlashcardList(props: any) {
     console.log("flashcsdfgsdfgdssdfgsdfgsf")
     console.log(flashcards)
     console.log(tags_list)
-    var flashcardsList = flashcards;
+    var flashcardsList:any = flashcards;
     const [tags, setTags] = useState<string[]>([]);
     const [tagInput, setTagInput] = useState('');
     const [filteredFlashcards, setFilteredFlashcards] = useState([]);
@@ -27,8 +27,33 @@ export default function FlashcardList(props: any) {
         return isValid; 
       }
 
-    function onDelete(id: string) {
-        console.log(`Excluir flashcard com ID: ${id}`)
+      function onDelete(id: string) {
+        
+        const isConfirmed = window.confirm('Tem certeza que deseja excluir este flashcard?');
+    
+        if (!isConfirmed) {
+            return;
+        }
+        console.log(`Excluir flashcard com ID: ${id}`);
+    
+        fetch(`http://localhost:3002/delete_flashcard/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Erro ao excluir o flashcard');
+            }
+            console.log('Flashcard excluído com sucesso!');
+        
+            const updatedFlashcards = flashcardsList.filter((flashcard: any) => flashcard.id !== id);
+            setFilteredFlashcards(updatedFlashcards);
+        })
+        .catch((error) => {
+            console.error('Erro:', error);
+        });
     }
 
     const handleTagInput = (e: React.ChangeEvent<HTMLInputElement>) => {
