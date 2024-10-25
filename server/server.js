@@ -177,6 +177,29 @@ app.post('/upload_flashcards_file', upload.single('file'), validateFile, async (
     }
 });
 
+app.delete('/delete_flashcard/:id', async (req, res) => {
+    const flashcardId = parseInt(req.params.id); 
+
+    try {
+        const data = await readJSONFile(jsonFilePath);
+
+        const flashcardIndex = data.flashcards.findIndex(flashcard => flashcard.id === flashcardId);
+
+        if (flashcardIndex === -1) {
+            return res.status(404).send('Flashcard não encontrado.');
+        }
+
+        data.flashcards.splice(flashcardIndex, 1);
+
+        await writeJSONFile(jsonFilePath, data);
+
+        res.status(200).send('Flashcard excluído com sucesso!');
+    } catch (error) {
+        console.error('Erro ao excluir o flashcard:', error);
+        res.status(500).send('Erro ao excluir o flashcard.');
+    }
+});
+
 app.listen(3002, () => {
     console.log('Servidor rodando na porta 3002');
 });
