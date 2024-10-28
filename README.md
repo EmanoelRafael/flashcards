@@ -1,4 +1,4 @@
-### Meus Flashcards 
+# Meus Flashcards 
 
 Meus Flashcards é uma aplicação que visa armazenar os flashcards para posterior utilização em estudos \
 esse armazenamento é feito utilizando tags informadas pelo usuário no momento da criação dos flashcards \
